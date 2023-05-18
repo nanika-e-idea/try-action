@@ -2,8 +2,9 @@
 name: Check Feature Tags on Staging
 
 on:
-  push:
-    branches: ["release/*", "!release/*_*"]
+  release:
+    types:
+      - published
   workflow_dispatch:
     inputs:
       github_variables:
@@ -26,8 +27,8 @@ jobs:
 
       - name: Check Feature Tags
         run: |
-        {
-          echo 'NEXT_PUBLIC_FEATURE_FLAG=${{ env.FEATURE_FLAG }}'
-        } > .env.production.local
+          {
+            echo 'NEXT_PUBLIC_FEATURE_FLAG=${{ env.FEATURE_FLAG }}'
+          } > .env.production.local
 
-        cat .env.production.local
+          cat .env.production.local

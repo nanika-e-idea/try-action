@@ -26,11 +26,11 @@ jobs:
 
       - name: Check Feature Tags
         run: |
-        {
-          echo 'NEXT_PUBLIC_FEATURE_FLAG=${{ env.FEATURE_FLAG }}'
-        } > .env.production.local
+          {
+            echo 'NEXT_PUBLIC_FEATURE_FLAG=${{ env.FEATURE_FLAG }}'
+          } > .env.production.local
 
-        cat .env.production.local
+          cat .env.production.local
 
 
 ```
