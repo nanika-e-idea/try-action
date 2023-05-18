@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
     inputs:
       variables:
-        description: "STG_FEATURE_FLAG"
+        description: "manual_run"
         required: false
   
 env:

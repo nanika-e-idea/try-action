@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
     inputs:
       variables:
-        description: "PRD_FEATURE_FLAG"
+        description: "manual_run"
         required: false
   
 env:
