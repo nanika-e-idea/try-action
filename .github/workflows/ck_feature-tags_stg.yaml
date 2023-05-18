@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
     inputs:
       github_variables:
-        description: "Github Variables"
+        description: "STG_FEATURE_FLAG"
         required: false
   
 env:
