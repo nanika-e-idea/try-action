@@ -1,0 +1,37 @@
+# github variablesが更新されたらこのworkflowが実行される
+name: Check Feature Tags on Staging
+
+on:
+  push:
+    branches: ["release/*", "!release/*_*"]
+  workflow_dispatch:
+    inputs:
+      github_variables:
+        description: "Github Variables"
+        required: false
+  
+env:
+  COMMON: common
+  # Feature Flagを取得
+  FEATURE_FLAG: ${{ variables.STG_FEATURE_FLAG }}
+
+jobs:
+  check_feature_tags:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Check Feature Tags
+        run: |
+        {
+          echo 'NEXT_PUBLIC_FEATURE_FLAG=${{ env.FEATURE_FLAG }}'
+        } > .env.production.local
+
+        cat .env.production.local
+
+
+```
+
