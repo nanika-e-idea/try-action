@@ -31,7 +31,3 @@ jobs:
           } > .env.production.local
 
           cat .env.production.local
-
-
-```
-
