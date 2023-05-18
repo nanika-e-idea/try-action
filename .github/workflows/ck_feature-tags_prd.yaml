@@ -14,7 +14,7 @@ on:
 env:
   COMMON: common
   # Feature Flagを取得
-  FEATURE_FLAG: ${{ variables.PRD_FEATURE_FLAG }}
+  FEATURE_FLAG: ${{ vars.PRD_FEATURE_FLAG }}
 
 jobs:
   check_feature_tags:
