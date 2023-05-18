@@ -6,7 +6,7 @@ on:
     branches: ["release/*", "!release/*_*"]
   workflow_dispatch:
     inputs:
-      github_variables:
+      variables:
         description: "STG_FEATURE_FLAG"
         required: false
   

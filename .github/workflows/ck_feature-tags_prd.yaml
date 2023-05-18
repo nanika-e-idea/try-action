@@ -7,7 +7,7 @@ on:
       - published
   workflow_dispatch:
     inputs:
-      github_variables:
+      variables:
         description: "PRD_FEATURE_FLAG"
         required: false
   
