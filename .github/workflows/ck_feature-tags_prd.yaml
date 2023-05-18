@@ -1,5 +1,5 @@
 # github variablesが更新されたらこのworkflowが実行される
-name: Check Feature Tags on Staging
+name: Check Feature Tags on Production
 
 on:
   release:
